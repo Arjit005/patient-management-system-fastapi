@@ -90,15 +90,26 @@ The API will be live at `http://127.0.0.1:8000`.
 
 ---
 
-## 📖 Interactive Documentation
+## 📖 Interactive Documentation & Live Demo
 
 Once the server is running, open:
 - **Swagger UI**: [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
 - **ReDoc**: [http://127.0.0.1:8000/redoc](http://127.0.0.1:8000/redoc)
 
-<div align="center">
-  <img src="https://fastapi.tiangolo.com/img/index/index-01-swagger-ui-simple.png" alt="Swagger UI Preview" width="700" style="border-radius: 8px; border: 1px solid #ddd; margin-top: 10px;"/>
-</div>
+### 1. Endpoints Overview (Swagger UI)
+Interactive dashboard displaying all registered endpoints:
+
+<p align="center">
+  <img src="./assets/swagger_endpoints.png" alt="FastAPI Swagger Endpoints" width="850" style="border-radius: 8px; border: 1px solid #ddd;"/>
+</p>
+
+### 2. Live Testing: Create Patient & Data Persistence
+Testing `POST /create` in Swagger UI (with `201 Created` response) and verified data persistence with computed `bmi` and `verdict` in `patients.json`:
+
+<p align="center">
+  <img src="./assets/swagger_create_patient.png" alt="POST Create Patient in Swagger UI" width="420" style="border-radius: 8px; border: 1px solid #ddd; vertical-align: top; margin-right: 10px;"/>
+  <img src="./assets/patients_json_storage.png" alt="Persisted Data in patients.json" width="420" style="border-radius: 8px; border: 1px solid #ddd; vertical-align: top;"/>
+</p>
 
 ---
 
@@ -131,5 +142,4 @@ The local data file `patients.json` is excluded in `.gitignore` for security and
 **Arjit Katiyar**  
 - **GitHub**: [@Arjit005](https://github.com/Arjit005)  
 - **Repository**: [patient-management-system-fastapi](https://github.com/Arjit005/patient-management-system-fastapi)  
-- **LinkedIn**: [Arjit Katiyar](https://www.linkedin.com/in/arjit-katiyar-18758430a)  
 - **Tech**: Python | FastAPI | Pydantic | REST APIs
