@@ -1,0 +1,44 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Build and packaging output
+build/
+dist/
+wheels/
+*.egg-info/
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.crt
+secrets.json
+credentials.json
+
+# Local application data
+patients.json
+*.sqlite
+*.sqlite3
+*.db
+*.log
+
+# IDE and operating-system files
+.idea/
+.vscode/settings.json
+.vscode/launch.json
+.vscode/*.code-snippets
+.DS_Store
+Thumbs.db
