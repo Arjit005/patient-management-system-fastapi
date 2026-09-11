@@ -10,6 +10,10 @@ A lightweight RESTful API for managing patient records with automatic BMI calcul
 [![Swagger](https://img.shields.io/badge/Docs-Swagger%20UI-85EA2D?style=flat&logo=swagger&logoColor=black)](http://127.0.0.1:8000/docs)
 [![GitHub](https://img.shields.io/badge/GitHub-Repo-181717?style=flat&logo=github&logoColor=white)](https://github.com/Arjit005/patient-management-system-fastapi)
 
+<p align="center">
+  <img src="https://fastapi.tiangolo.com/img/logo-margin/logo-teal.png" alt="FastAPI Banner" width="380"/>
+</p>
+
 </div>
 
 ---
@@ -17,6 +21,36 @@ A lightweight RESTful API for managing patient records with automatic BMI calcul
 ## 📌 Overview
 
 A clean backend project built to practice and demonstrate core **FastAPI** and **Pydantic v2** concepts. It provides complete CRUD operations to manage patient records, validates request data automatically, computes real-time BMI and health verdicts, and persists data to a local JSON file.
+
+---
+
+## 🏛️ System Architecture
+
+```mermaid
+flowchart LR
+    Client([Client / Swagger UI]) -->|HTTP Request| API[FastAPI Endpoints]
+    API -->|Validation| Model[Pydantic v2 Models]
+    Model -->|Computed Fields| Logic[Dynamic BMI & Verdict]
+    API -->|Read / Write| Storage[(patients.json)]
+    Storage -.->|Fallback Template| Tpl[(patients.json.example)]
+    API -->|JSON Response| Client
+```
+
+---
+
+## 📁 Project Structure
+
+```text
+patient-management-system-fastapi/
+├── .env.example            # Sample environment configuration
+├── .gitignore              # Privacy rules (excludes patients.json, .venv)
+├── .python-version         # Python version specifier (3.13)
+├── main.py                 # FastAPI app, Pydantic models & CRUD endpoints
+├── patients.json           # Local runtime data storage (Git-ignored)
+├── patients.json.example   # Dummy template for testing & cloning
+├── pyproject.toml          # Project dependencies & metadata
+└── README.md               # Project documentation
+```
 
 ---
 
@@ -61,6 +95,10 @@ The API will be live at `http://127.0.0.1:8000`.
 Once the server is running, open:
 - **Swagger UI**: [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
 - **ReDoc**: [http://127.0.0.1:8000/redoc](http://127.0.0.1:8000/redoc)
+
+<div align="center">
+  <img src="https://fastapi.tiangolo.com/img/index/index-01-swagger-ui-simple.png" alt="Swagger UI Preview" width="700" style="border-radius: 8px; border: 1px solid #ddd; margin-top: 10px;"/>
+</div>
 
 ---
 
